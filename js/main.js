@@ -113,8 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Cargar y mostrar noticias públicas
   cargarNoticiasPublicas();
-});
 
+
+
+});
+/*
 // Cargar y mostrar solo noticias públicas (estado = "publica")
 function cargarNoticiasPublicas() {
   fetch('datos/noticias.json')
@@ -127,6 +130,22 @@ function cargarNoticiasPublicas() {
       console.error('Error al cargar las noticias:', error);
     });
 }
+*/
+//Para el filtro de fecha y categoria
+let todasLasNoticias = [];
+
+function cargarNoticiasPublicas() {
+  fetch('datos/noticias.json')
+    .then(response => response.json())
+    .then(data => {
+      todasLasNoticias = data.filter(noticia => noticia.estado === 'publica');
+      mostrarNoticias(todasLasNoticias);
+    })
+    .catch(error => {
+      console.error('Error al cargar las noticias:', error);
+    });
+}
+
 
 function mostrarNoticias(noticias) {
   const contenedor = document.querySelector('.grid-noticias');
@@ -144,7 +163,7 @@ function mostrarNoticias(noticias) {
     imagen.classList.add('imagen-noticia');
     imagen.onerror = () => imagen.src = 'imagenes/imagenEnCasoDeError.jpg';
 
-    const titulo = document.createElement('h2'); 
+    const titulo = document.createElement('h2');
     titulo.textContent = noticia.titulo;
 
     const resumen = document.createElement('p');
@@ -199,4 +218,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+});
+
+//logica para el filtro
+document.addEventListener('DOMContentLoaded', () => {
+  const filtroFecha = document.getElementById('filtro-fecha');
+  const filtroCategoria = document.getElementById('filtro-categoria');
+  const btnAplicarFiltros = document.getElementById('btn-aplicar-filtros');
+
+  if (btnAplicarFiltros) {
+    btnAplicarFiltros.addEventListener('click', () => {
+      const fechaSeleccionada = filtroFecha.value;
+      const categoriaSeleccionada = filtroCategoria.value.toLowerCase();
+
+      const filtradas = todasLasNoticias.filter(noticia => {
+        const coincideFecha = !fechaSeleccionada || noticia.fecha === fechaSeleccionada;
+        const coincideCategoria = !categoriaSeleccionada || noticia.categoria.toLowerCase() === categoriaSeleccionada;
+
+        return coincideFecha && coincideCategoria;
+      });
+
+      mostrarNoticias(filtradas);
+    });
+  }
 });

@@ -39,6 +39,24 @@
   <main class="container">
     <h2>Noticias Destacadas</h2>
 
+    <!--Para un filtro de noticias por fecha y categoria-->
+    <div class="filtros-noticias">
+      <label for="filtro-fecha">Fecha:</label>
+      <input type="date" id="filtro-fecha">
+
+      <label for="filtro-categoria">Tema:</label>
+      <select id="filtro-categoria">
+        <option value="">Todos</option>
+        <option value="Medio Ambiente">Medio Ambiente</option>
+        <option value="Salud Pública">Salud Pública</option>
+        <option value="Salud">Salud</option>
+        <option value="Servicios">Servicios</option>
+        <option value="ecologia">Ecología</option>
+      </select>
+
+      <button id="btn-aplicar-filtros">Filtrar</button>
+    </div>
+
     <!-- Cuadrícula de noticias -->
     <div class="grid-noticias">
       <!-- Tarjetas de noticia (se llenarán con JS o de forma dinámica) -->
