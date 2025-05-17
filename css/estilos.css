@@ -321,7 +321,7 @@ input[type="password"] {
   opacity: 0;
 }
 
-/* Contenedor del menú desplegable*/
+/* Contenedor del menú desplegable
 .menu-usuario {
   position: absolute;
   top: 100%;
@@ -336,7 +336,7 @@ input[type="password"] {
   flex-direction: column;
   z-index: 999;
   animation: desplegar 0.3s ease-out forwards;
-}
+}*/
 
 /* Efecto de aparición */
 @keyframes desplegar {
@@ -400,25 +400,11 @@ input[type="password"] {
 
 /*Menú desplegable*/
 
-/*.menu-desplegable {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #2ca02c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 1000;
-  min-width: 180px;
-  padding: 0;
-  margin-top: 5px;
-}*/
-
 .menu-desplegable {
   position: absolute;
   top: 100%;
-  right: 0;         /* alineado con el borde derecho del botón */
-  left: auto;       /* asegurate de que left no esté forzando algo */
+  right: 0;         
+  left: auto;       
   background-color: #2ca02c;
   border-radius: 8px;
   padding: 0;
@@ -450,4 +436,16 @@ input[type="password"] {
 }
 
 
+
+.filtros-noticias {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem; /* Espacio entre filtros */
+  margin-bottom: 1rem; /* Separación con el contenido siguiente */
+}
+
+.filtros-noticias div {
+  display: flex;
+  flex-direction: column;
+}
 
