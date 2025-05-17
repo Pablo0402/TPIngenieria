@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Al cerrar sesión, limpiamos sessionStorage y redirigimos al inicio
   cerrarSesion.addEventListener('click', (e) => {
     e.preventDefault();
-    sessionStorage.removeItem('usuarioLogueado');
+    localStorage.removeItem('usuarioLogueado');
     window.location.href = '../index.html';
   });
 
   // Verificación de sesión (por seguridad)
-  const usuario = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+  const usuario = JSON.parse(localStorage.getItem('usuarioLogueado'));
   if (!usuario || usuario.tipo !== 'administrador') {
     // Si no hay sesión válida, redirigimos al login
     window.location.href = '../login.html';

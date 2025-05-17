@@ -207,21 +207,7 @@ input[type="password"] {
   text-decoration: underline;
 }
 
-/* Botón del usuario logueado */
-.btn-usuario {
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
 
-.btn-usuario:hover {
-  background-color: #003f7f;
-}
 
 /* Estilos para la página de detalle de noticia */
 .detalle-noticia {
@@ -335,26 +321,6 @@ input[type="password"] {
   opacity: 0;
 }
 
-/*/* Estilo general del botón del usuario */
-.btn-usuario {
-  background-color: #2a7d2e;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  position: relative;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Opcional: hacer que la flecha ▼ rote si el menú está visible */
-.btn-usuario.abierto::after {
-  transform: rotate(180deg);
-}
-
 /* Contenedor del menú desplegable */
 .menu-usuario {
   position: absolute;
@@ -387,130 +353,42 @@ input[type="password"] {
   }
 }
 
-/* Cada ítem del menú */
+/* Cada ítem del menú 
 .item-menu {
   padding: 12px 16px;
   cursor: pointer;
   font-size: 14px;
   color: white;
-  /* Letras blancas */
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: background-color 0.2s;
 }
 
-/* Último ítem sin borde */
+
 .item-menu:last-child {
   border-bottom: none;
 }
 
-/* Hover */
+
 .item-menu:hover {
   background-color: #1b6f1b;
-  /* Verde más oscuro */
-}
+  
+}*/
 
-/* Asegurar que el menú no se corte en dispositivos chicos */
+/* Asegurar que el menú no se corte en dispositivos chicos 
 @media (max-width: 600px) {
   .menu-usuario {
     width: 100%;
     right: auto;
     left: 0;
   }
-}
-
-/* Contenedor para posicionar menú debajo del botón */
-.contenedor-usuario {
-  position: relative;
-  display: inline-block;
-}
-
-/* Estilo del botón del usuario */
-.btn-usuario {
-  background-color: #007b5e;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* Flechita ▼ junto al nombre */
-.btn-usuario::after {
-  content: " ▼";
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-/* Menú desplegable */
-.menu-desplegable {
-  display: none;
-  position: absolute;
-  top: 100%;
-  /* justo debajo del botón */
-  left: 0;
-  background-color: #007b5e;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 1000;
-  min-width: 180px;
-  padding: 0;
-  margin-top: 5px;
-}
-
-/* Ítems del menú */
-.menu-desplegable li {
-  list-style: none;
-  padding: 12px 16px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  font-weight: 500;
-}
-
-.menu-desplegable li:hover {
-  background-color: #007b5e;
-}
-
-/* Transición y animación para el menú desplegable */
-.menu-desplegable {
-  display: none;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #2ca02c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 1000;
-  min-width: 180px;
-  padding: 0;
-  margin-top: 5px;
-}
+}*/
 
 /* Clase que activa la animación */
 .menu-visible {
   display: block;
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Contenedor del botón de usuario y menú desplegable */
-.contenedor-usuario {
-  position: relative;
-  display: inline-block;
-}
-
-/* Botón que muestra el nombre del usuario logueado */
-.btn-usuario {
-  background-color: #007b5e;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
 }
 
 /*Boton de busqueda de noticias en el menu principal*/
@@ -526,3 +404,69 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/*Boton de usuario*/
+
+.btn-usuario {
+  background-color: #007b5e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-usuario:hover {
+  background-color: #005c46;
+}
+
+.btn-usuario::after {
+  content: " ▼";
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/*Menú desplegable*/
+
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #007b5e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 180px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.menu-desplegable li {
+  list-style: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-desplegable li:hover {
+  background-color: #005c46;
+}
+
+/*Contenedor usuario*/
+
+.contenedor-usuario {
+  position: relative;
+  display: inline-block;
+}
+
+
+
