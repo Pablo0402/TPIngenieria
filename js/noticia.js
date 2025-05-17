@@ -34,21 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 });
 
-/*
-document.addEventListener('DOMContentLoaded', () => {
-  const logo = document.getElementById('logo');
-  if (logo) {
-    logo.addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  }
-});
-*/
 document.addEventListener('DOMContentLoaded', () => {
     const logoTarjeta = document.getElementById('logo-tarjeta');
     if (logoTarjeta) {
         logoTarjeta.addEventListener('click', () => {
-            window.location.href = 'index.html'; // o '/index.html' si estás usando servidor
+            window.location.href = 'index.html';
         });
     }
 });

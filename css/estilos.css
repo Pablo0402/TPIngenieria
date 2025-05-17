@@ -1,319 +1,320 @@
 /* Estilos generales del body y contenedor */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #e8f5e9; /* verde claro agradable */
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
+  /* verde claro agradable */
+  color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    /* Centrar contenido */
-    padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Centrar contenido */
+  padding: 10px;
 }
 
 /* Header: barra superior azul oscuro */
 header {
-    display: flex;
-    justify-content: space-between;
-    /* Espacio entre logo y login */
-    align-items: center;
-    background-color: #003366;
-    /* Azul oscuro */
-    color: white;
-    padding: 15px 20px;
-    flex-wrap: wrap;
-    /* Para que en pantallas chicas se acomode */
+  display: flex;
+  justify-content: space-between;
+  /* Espacio entre logo y login */
+  align-items: center;
+  background-color: #003366;
+  /* Azul oscuro */
+  color: white;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  /* Para que en pantallas chicas se acomode */
 }
 
 /* Espacio del logo (vacío por ahora) */
 .logo {
-    flex: 1 1 150px;
-    /* flexible pero con mínimo 150px */
+  flex: 1 1 150px;
+  /* flexible pero con mínimo 150px */
 }
 
 /* Espacio para publicidad */
 .publicidad {
-    flex: 2 1 300px;
-    font-size: 14px;
-    padding-left: 20px;
+  flex: 2 1 300px;
+  font-size: 14px;
+  padding-left: 20px;
 }
 
 /* Botón iniciar sesión en verde */
 .login button {
-    background-color: #2ca02c;
-    /* Verde */
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background-color: #2ca02c;
+  /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .login button:hover {
-    background-color: #1b6f1b;
-    /* Verde más oscuro al pasar mouse */
+  background-color: #1b6f1b;
+  /* Verde más oscuro al pasar mouse */
 }
 
 /* Título principal */
 main h2 {
-    color: #003366;
-    /* Azul oscuro */
-    text-align: center;
-    margin-top: 40px;
+  color: #003366;
+  /* Azul oscuro */
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* Grid para noticias destacadas */
 .grid-noticias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Responsive */
-    gap: 20px;
-    margin: 20px 0 60px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Responsive */
+  gap: 20px;
+  margin: 20px 0 60px 0;
 }
 
 /*acomoda la imagen de la noticia*/
 .imagen-noticia {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Cada noticia con borde y fondo blanco */
 .noticia {
-    background-color: #ffffff;
-    border: 2px solid #2ca02c;
-    /* borde verde */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #2ca02c;
+  /* borde verde */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 /* Efecto al pasar mouse */
 .noticia:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer azul oscuro con texto blanco */
 footer {
-    background-color: #003366;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 /* Lista horizontal de links útiles */
 footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-flex;
-    gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 25px;
 }
 
 footer ul li a {
-    color: #2ca02c;
-    /* Verde */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #2ca02c;
+  /* Verde */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
-    color: #ffffff;
-    /* Blanco al pasar mouse */
+  color: #ffffff;
+  /* Blanco al pasar mouse */
 }
 
 /* Responsive: para pantallas chicas ajustar header */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .login {
-        margin-top: 10px;
-        align-self: flex-end;
-    }
+  .login {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
 }
 
 .login-container {
-    max-width: 400px;
-    margin: 60px auto;
-    background-color:#eafbea;
-    color: #003366;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #0a4c91;
+  max-width: 400px;
+  margin: 60px auto;
+  background-color: #eafbea;
+  color: #003366;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #0a4c91;
 }
 
 h2 {
-    text-align: center;
-    color: #0a4c91;
+  text-align: center;
+  color: #0a4c91;
 }
 
 label {
-    display: block;
-    margin-top: 15px;
-    color: #0a4c91;
+  display: block;
+  margin-top: 15px;
+  color: #0a4c91;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .btn-login {
-    margin-top: 20px;
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-login:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .registro-link {
-    text-align: center;
-    margin-top: 15px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .registro-link a {
-    color: #0a4c91;
-    text-decoration: none;
+  color: #0a4c91;
+  text-decoration: none;
 }
 
 .registro-link a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Botón del usuario logueado */
 .btn-usuario {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn-usuario:hover {
-    background-color: #003f7f;
+  background-color: #003f7f;
 }
 
 /* Estilos para la página de detalle de noticia */
 .detalle-noticia {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #ffffff;
-    border: 2px solid #2ca02c;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border: 2px solid #2ca02c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .detalle-noticia .imagen-detalle {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
 .detalle-noticia .fecha {
-    color: #888;
-    font-style: italic;
-    margin-bottom: 10px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 /* Animacion de la tarjeta del logo de la pagina*/
 .logo-tarjeta {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .logo-tarjeta:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .logo-tarjeta img {
-    height: 60px;
-    /* ajustá el tamaño como prefieras */
-    border-radius: 8px;
-    display: block;
+  height: 60px;
+  /* ajustá el tamaño como prefieras */
+  border-radius: 8px;
+  display: block;
 }
 
 /*Seccion de comentarios*/
 .comentarios {
-    margin-top: 40px;
-    padding: 20px;
-    border-top: 2px solid #ccc;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid #ccc;
 }
 
 .comentarios textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: vertical;
 }
 
 .comentarios button {
-    background-color: #2ca02c;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #2ca02c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .comentarios button:hover {
-    background-color: #1b6f1b;
+  background-color: #1b6f1b;
 }
 
 .mensaje-info,
 .mensaje-confirmacion {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .mensaje-info {
-    background-color: #fff3cd;
-    color: #856404;
+  background-color: #fff3cd;
+  color: #856404;
 }
 
 .mensaje-confirmacion {
-    background-color: #d4edda;
-    color: #155724;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 /*Desvanecimiento de cartel "Publicacion en revision*/
@@ -359,8 +360,10 @@ input[type="password"] {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #2ca02c; /* Verde */
-  color: white; /* Letras blancas */
+  background-color: #2ca02c;
+  /* Verde */
+  color: white;
+  /* Letras blancas */
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
@@ -377,6 +380,7 @@ input[type="password"] {
     opacity: 0;
     transform: translateY(-10%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -388,7 +392,8 @@ input[type="password"] {
   padding: 12px 16px;
   cursor: pointer;
   font-size: 14px;
-  color: white; /* Letras blancas */
+  color: white;
+  /* Letras blancas */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: background-color 0.2s;
 }
@@ -400,7 +405,8 @@ input[type="password"] {
 
 /* Hover */
 .item-menu:hover {
-  background-color: #1b6f1b; /* Verde más oscuro */
+  background-color: #1b6f1b;
+  /* Verde más oscuro */
 }
 
 /* Asegurar que el menú no se corte en dispositivos chicos */
@@ -440,7 +446,8 @@ input[type="password"] {
 .menu-desplegable {
   display: none;
   position: absolute;
-  top: 100%; /* justo debajo del botón */
+  top: 100%;
+  /* justo debajo del botón */
   left: 0;
   background-color: #007b5e;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -506,3 +513,16 @@ input[type="password"] {
   font-weight: bold;
 }
 
+/*Boton de busqueda de noticias en el menu principal*/
+.busqueda-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#campo-busqueda {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
