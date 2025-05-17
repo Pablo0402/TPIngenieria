@@ -29,6 +29,47 @@
         <h1>Perfil de Usuario</h1>
         <p>Bienvenido a tu perfil. Aquí podrás gestionar tu información personal y preferencias.</p>
         <!-- Contenido adicional del perfil -->
+
+        <section class="perfil-opciones">
+            <div class="opciones-container">
+                <h2>Opciones de Perfil</h2>
+                <form action="#" method="POST">
+                    <!-- Nombre completo -->
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre"/>
+        
+                    <!-- Nombre de usuario -->
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input type="text" id="usuario" name="usuario"/>
+        
+                    <!-- DNI -->
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" />
+        
+                    <!-- Correo electrónico -->
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="text" id="correo" name="correo"/>
+        
+                    <!-- Nueva contraseña -->
+                    <label for="clave">Nueva contraseña:</label>
+                    <input type="password" id="clave" name="clave" placeholder="Nueva contraseña" />
+
+                    <!-- Confirmar contraseña -->
+                    <label for="confirmar-clave">Confirmar nueva contraseña:</label>
+                    <input type="password" id="confirmar-clave" name="confirmar-clave" placeholder="Confirmar nueva contraseña" />
+                    
+                    <!-- Checkbox newsletter -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked />
+                        <label for="newsletter">Deseo recibir el boletín semanal de noticias</label>
+                    </div>
+        
+                    <!-- Botón -->
+                    <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                </form>
+            </div>
+        </section>
+        
     </main>
 
     <!-- Pie de página (Footer) -->
