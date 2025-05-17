@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const loginBtn = document.getElementById('loginBtn');
 
   // Verificar si hay un usuario logueado
-  const usuarioGuardado = sessionStorage.getItem('usuarioLogueado');
+  const usuarioGuardado = localStorage.getItem('usuarioLogueado');
   if (usuarioGuardado) {
     const usuario = JSON.parse(usuarioGuardado);
     const nombreUsuario = usuario.usuario;
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
       usuarioBtn.addEventListener('click', function () {
         const cerrar = confirm('¿Querés cerrar sesión?');
         if (cerrar) {
-          sessionStorage.removeItem('usuarioLogueado');
+          localStorage.removeItem('usuarioLogueado');
           location.reload();
         }
       });

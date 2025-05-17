@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Verificar si hay un usuario logueado
     const usuarioGuardado = localStorage.getItem('usuarioLogueado');
+    
     if (usuarioGuardado) {
         const usuario = JSON.parse(usuarioGuardado);
         const nombreUsuario = usuario.usuario;

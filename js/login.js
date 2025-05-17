@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       alert(`Bienvenido, ${usuarioIngresado}! Rol: ${rol}`);
 
       // 5. Guardar en localStorage si querés usarlo en otras partes
-      sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
+      localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
 
       // 6. Redirigir al index siempre independientemente de que rol sea 
 
