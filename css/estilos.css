@@ -435,7 +435,7 @@ input[type="password"] {
   display: inline-block;
 }
 
-
+/*Filtros de fecha y tema*/
 
 .filtros-noticias {
   display: flex;

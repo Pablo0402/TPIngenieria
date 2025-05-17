@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const opcionPerfil = document.createElement('li');
       opcionPerfil.textContent = 'Mi perfil';
       opcionPerfil.addEventListener('click', () => {
-        window.location.href = 'usuario/perfil.html';
+        window.location.href = '/usuario/perfil.html';
       });
       menu.appendChild(opcionPerfil);
     }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     opcionCerrarSesion.textContent = 'Cerrar sesión';
     opcionCerrarSesion.addEventListener('click', () => {
       localStorage.removeItem('usuarioLogueado');
-      location.href = 'index.html';
+      location.href = '../index.html';
     });
   
     menu.appendChild(opcionCerrarSesion);

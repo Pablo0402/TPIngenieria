@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoTarjeta = document.getElementById('logo-tarjeta');
   if (logoTarjeta) {
     logoTarjeta.addEventListener('click', () => {
-      window.location.href = 'index.html';
+      window.location.href = '../index.html';
     });
   }
 });
